@@ -64,6 +64,11 @@ form input[type=text]:focus {
 }
 
 
+section .copyright {
+	text-align: center;
+	align-items: center;
+}
+
 
 /*Mobile view section*/
 
@@ -80,3 +85,4 @@ form input[type=text]:focus {
 		font-size: 17px;
 	}
 }
+
