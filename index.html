@@ -14,34 +14,14 @@
 <body>
 
 	<!-- This is the base of the application -->
-	<div class="app"></div>
-	
-	<section class="searcharea">
-		<div class="container">
-			<nav class="nav" style="margin-top: 10px;">
-			  <img src="ahlogo.jpg" height="60px">	
-			</nav>
-
-			<!--- Search area --->
-			<div class="input-section">
-				<div class="search-holder">
-					
-					<img src="searchimage.svg" height="100px">
-					<h2>academic<strong>hive</strong> <span class="logo-text">Journal Finder</span></h2>
-					<form method="GET" action="">
-						<input type="text" name="search" placeholder="Journal keywords">
-						<input v-on:click="inputsubmit" type="submit" name="submit" value="Search">
-					</form>
-				</div>
-			</div>
-		</div>
-
-		<!-- Copyright text -->
-		<div class="copyright">{{message}}</div>
-	</section>
-
+	<div id="app">
+		<search-area></search-area>
+	</div>
 	
 	<script src="app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./components/search-area.vue.js"></script>
+	<script src="./components/results.vue.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
