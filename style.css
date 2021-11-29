@@ -13,6 +13,10 @@ body {
 	justify-content: center;
 }
 
+.class {
+	margin-top: 45px;
+}
+
 .input-section {
 	margin-top: 13vh !important;
 	margin: auto;
