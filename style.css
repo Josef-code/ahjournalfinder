@@ -8,6 +8,11 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.container {
+	display: flex;
+	justify-content: center;
+}
+
 .input-section {
 	margin-top: 13vh !important;
 	margin: auto;

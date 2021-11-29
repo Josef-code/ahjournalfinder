@@ -1,9 +1,23 @@
 const JournalData = {
 	data() {
-		return {}
+		return {
+			requests: {
+                searchTerm : null
+            },
+            searchResults : false
+		}
+	},
+
+	methods: {
+
+        searchData(e){
+        	e.preventDefault()
+            $(".searcharea").hide(),
+            this.searchResults = !this.searchResults
+        }
 	}
 
 }
 
-// Vue.createApp(JournalData).mount('.search-holder');
-Vue.createApp().mount();
+Vue.createApp(JournalData).mount('#app');
+// Vue.createApp().mount();
