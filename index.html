@@ -34,7 +34,7 @@
 		                </div>
 		            </div>
 		        </section>
-		        
+
 
 		        <!-- THIS SECTION DISPLAYS THE API DATA -->
 
@@ -51,11 +51,12 @@
 		                	<a href="#">{{this.requests.searchTerm}}</a>
 		                </h5>
 		                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-		                	<span class="card-link">Author 1</span>
-		                	<span class="card-link">Author 2</span>
-		                	<span class="card-link">Author 3</span>
-		                	<span class="card-link">Author 4</span>
-
+		                	<div v-for="item in searchOutput">
+			                	<span class="card-link">{{item}}</span>
+			                	<!-- <span class="card-link">Author 2</span>
+			                	<span class="card-link">Author 3</span>
+			                	<span class="card-link">Author 4</span> -->
+		                	</div>
 		              </div>
 		              <!-- <div class="card-body">
 		                <a href="#" class="card-link">Journal Link</a>
