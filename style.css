@@ -93,5 +93,9 @@ section .copyright {
 	form [type=submit] {
 		font-size: 17px;
 	}
+
+	.card {
+		width: 100% !important;
+	}
 }
 

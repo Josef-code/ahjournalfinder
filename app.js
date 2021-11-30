@@ -4,7 +4,8 @@ const JournalData = {
 			requests: {
                 searchTerm : null
             },
-            searchResults : false
+            searchResults : false,
+            searchOutput: []
 		}
 	},
 
@@ -16,7 +17,7 @@ const JournalData = {
             this.searchResults = !this.searchResults,
             axios
             .get('https://api.elsevier.com/content/search/sciencedirect?query=' + this.requests.searchTerm + '&apiKey=7f59af901d2d86f78a1fd60c1bf9426a')
-            .then(response => (console.log(response.data['search-results']['entry'])))
+            .then(response => (console.log(response.data['search-results']['entry'])));
         }
 	}
 
