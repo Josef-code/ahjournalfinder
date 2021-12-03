@@ -47,7 +47,7 @@
 		            	</ul>
 		            	<hr>
 		              <div class="card-body" v-for="result in totalResults">
-		                <p class="card-title"><a v-bind:href="result['link'][1]['@href']">{{result["dc:title"]}}</a></p>
+		                <p class="card-title"><a v-bind:href="result['link'][1]['@href']" target="_blank">{{result["dc:title"]}}</a></p>
 		                <p><strong>Publication Name:</strong> {{result["prism:publicationName"]}}<p>
 		                <p><strong>Cover Date:</strong> {{result["prism:coverDate"]}}</p>
 		                <p><strong>Creator:</strong> {{result["dc:creator"]}} </p>
