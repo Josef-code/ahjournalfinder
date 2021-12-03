@@ -78,6 +78,11 @@ section .copyright {
 	align-items: center;
 }
 
+.card-title a {
+	text-decoration: none;
+	color: #EA232D;
+	font-weight: 500;
+}
 
 /*Mobile view section*/
 

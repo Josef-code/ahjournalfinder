@@ -25,7 +25,7 @@
 		                <div class="input-section">
 		                    <div class="search-holder">
 		                        <img src="searchimage.svg" height="100px">
-		                        <h2>academic<strong>hive</strong> <span class="logo-text">Journal Finder</span></h2>
+		                        <h2>academic<strong>hive</strong><br> <span class="logo-text">Journal Finder</span></h2>
 		                        <form @submit="searchData" method="GET">
 		                            <input type="text" name="search" placeholder="Journal keywords" v-model="requests.searchTerm">
 		                            <input type="submit" name="submit" value="Search">
@@ -42,26 +42,18 @@
 		            <div class="container">
 		            <div class="card" style="width: 50%;">
 		            	<ul style="margin-top: 20px; margin-bottom: 0;">
-		            		<li><strong><h5>Total Results: {{totalResults}}</h5></strong></li>
-		            		<li><strong><h5>Search Term(s): {{this.requests.searchTerm}}</h5></strong></li>
+		            		<li><strong><h5>Total Results: </h5></strong></li>
+		            		<li><strong><h5>Search Term(s):</h5></strong></li>
 		            	</ul>
 		            	<hr>
-		              <div class="card-body" v-for="post in posts">
-		                <h5 class="card-title">
-		                	<a href="#">{{post['title']}}</a>
-		                </h5>
-	                	<div class="card-link">
-	                		<p>{{post['body']}}</p>
-	                		<hr>            		
-	                	</div>
-			                	
-			                	<!-- <span class="card-link">Author 3</span>
-			                	<span class="card-link">Author 4</span>  -->
+		              <div class="card-body" v-for="result in totalResults">
+		                <p class="card-title"><a href="{{result['prism:url']}}">{{result["dc:title"]}}</a></p>
+		                <p><strong>Publication Name:</strong> {{result["prism:publicationName"]}}<p>
+		                <p><strong>Cover Date:</strong> {{result["prism:coverDate"]}}</p>
+		                <p><strong>Creator:</strong> {{result["dc:creator"]}} </p>
+		                <p><strong>Identifier:</strong> {{result["dc:identifier"]}} </p>
+	                	<hr>
 		              </div>
-		              <!-- <div class="card-body">
-		                <a href="#" class="card-link">Journal Link</a>
-		                <a href="#" class="card-link">Another link</a>
-		              </div> -->
 		            </div>
 		            </div>
 		        </section>

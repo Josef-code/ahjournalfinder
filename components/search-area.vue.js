@@ -14,7 +14,7 @@ app.component('search-area', {
             $(".searcharea").hide();
             e.preventDefault();
         }
-    },
+    }
    
    
 })
