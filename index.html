@@ -41,17 +41,19 @@
 		        <section class="resultarea" v-if="searchResults">
 		            <div class="container">
 		            <div class="card" style="width: 50%;">
-		            	<ul style="margin-top: 20px; margin-bottom: 0;">
-		            		<li><strong><h5>Total Results: </h5></strong></li>
+		            	<!-- <ul style="margin-top: 20px; margin-bottom: 0;" v-for="data in searchOutput">
+		            		<li><strong><h5>Total Results: {{data}} </h5></strong></li>
 		            		<li><strong><h5>Search Term(s):</h5></strong></li>
-		            	</ul>
-		            	<hr>
+		            	</ul> -->
+		            	<!-- <hr> -->
 		              <div class="card-body" v-for="result in totalResults">
 		                <p class="card-title"><a v-bind:href="result['link'][1]['@href']" target="_blank">{{result["dc:title"]}}</a></p>
 		                <p><strong>Publication Name:</strong> {{result["prism:publicationName"]}}<p>
 		                <p><strong>Cover Date:</strong> {{result["prism:coverDate"]}}</p>
 		                <p><strong>Creator:</strong> {{result["dc:creator"]}} </p>
 		                <p><strong>Identifier:</strong> {{result["dc:identifier"]}} </p>
+		                <!-- <p><strong>Author(s):</strong></p>
+		                <div class="card-link">{{result["authors"]["author"]}}</div> -->
 	                	<hr>
 		              </div>
 		            </div>

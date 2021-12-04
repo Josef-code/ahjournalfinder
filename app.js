@@ -6,7 +6,7 @@ const JournalData = {
             },
             searchResults : false,
             totalResults: [],
-            searchOutput: null
+            searchOutput: []
 		}
 	},
 
@@ -19,8 +19,9 @@ const JournalData = {
             axios
             .get('https://api.elsevier.com/content/search/sciencedirect?query=' + this.requests.searchTerm + '&apiKey=7f59af901d2d86f78a1fd60c1bf9426a')
             .then(response => (
-            	// console.log(response.data["search-results"].entry),
-            	this.totalResults = response.data["search-results"].entry
+            	console.log(response.data["search-results"]),
+            	this.totalResults = response.data["search-results"].entry,
+            	this.searchOutput = response.data["search-results"]["opensearch:totalResults"]
             ));
             // axios
             // .get('https://dev.elsevier.com/payloads/search/scidirV2PUTSearchResp.json')
